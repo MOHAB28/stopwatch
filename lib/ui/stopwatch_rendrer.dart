@@ -20,7 +20,11 @@ class StopwatchRenderer extends StatelessWidget {
     return Stack(
       children: [
         for (var i = 0; i < 60; i++)
-          CloclSecondsTickerMarker(seconds: i, radius: radius),
+          Positioned(
+            left: radius,
+            top: radius,
+            child: CloclSecondsTickerMarker(seconds: i, radius: radius),
+          ),
         Positioned(
           left: radius,
           top: radius,
